@@ -70,7 +70,7 @@ public class PedidoServiceImpl implements PedidoService {
                 }).orElseThrow(() -> new RegraNegocioException("Pedido não encontrado"));
     }
 
-    private List<ItemPedido> converterItems(Pedido pedido, List<ItemPedidoDTO> items){
+    private List<ItemPedido> converterItems(Pedido pedido, List<ItemPedidoDTO> items) {
         if(items.isEmpty()){
             throw new RegraNegocioException("Não é possível realizar um pedido sem items.");
         }
